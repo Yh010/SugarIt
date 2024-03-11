@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 import './App.css'
-import { ScrollPics} from './components/Scrollbar'
+import { ScrollPics} from './components/ScrollPics'
 
 function App() {
   const [count, setCount] = useState(0)
