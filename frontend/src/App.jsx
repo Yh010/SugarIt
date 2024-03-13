@@ -1,17 +1,15 @@
-import { useState } from 'react'
 
 import './App.css'
 import { ScrollPics} from './components/ScrollPics'
+import Footer from './components/footer'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div>
       <div>
         <ScrollPics/>
       </div>
-     
+     <Footer/>
     </div>
   )
 }
