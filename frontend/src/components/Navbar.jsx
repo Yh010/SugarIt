@@ -6,7 +6,7 @@ function NavList() {
     <ul className="flex flex-row gap-4 lg:gap-6">
       <li className="font-medium">
         <a href="#" className="hover:text-blue-500 transition-colors text-blue-gray-900">
-          Pages
+          Menu
         </a>
       </li>
       <li className="font-medium">
