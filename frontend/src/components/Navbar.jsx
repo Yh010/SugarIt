@@ -20,8 +20,8 @@ function NavList() {
         </Link>
       </li>
       <li className="font-medium">
-        <Link to="/docs" className="hover:text-blue-500 transition-colors text-blue-gray-900">
-          Docs
+        <Link to="/AboutUs" className="hover:text-blue-500 transition-colors text-blue-gray-900">
+          About Us
         </Link>
       </li>
     </ul>
