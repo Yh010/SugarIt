@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 const Categories = ({ categories, filterItems }) => {
   return (
     <div className="btn-container">
