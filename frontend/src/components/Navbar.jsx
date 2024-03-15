@@ -15,8 +15,8 @@ function NavList() {
         </Link>
       </li>
       <li className="font-medium">
-        <Link to="/blocks" className="hover:text-blue-500 transition-colors text-blue-gray-900">
-          Blocks
+        <Link to="/books" className="hover:text-blue-500 transition-colors text-blue-gray-900">
+          Books
         </Link>
       </li>
       <li className="font-medium">

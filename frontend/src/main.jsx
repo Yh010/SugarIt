@@ -9,6 +9,7 @@ import App from './App.jsx'
 import './index.css'
 import Menu from './pages/Menu/Menu.jsx';
 import AboutUs from './pages/AboutUs/AboutUs.jsx';
+import Books from './pages/Books/Books.jsx';
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
     path: "/AboutUs",
     element: <AboutUs/>
   },
+  {
+    path: "/books",
+    element: <Books/>
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
