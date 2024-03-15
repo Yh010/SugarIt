@@ -22,10 +22,9 @@ export default function AboutUs() {
                     <br className="block sm:hidden" />Jenny Carter
                 </h2>
                 <p className="max-w-lg mt-3 text-xl leading-relaxed text-gray-600 md:mt-8">
-                    Amet minim mollit non deserunt
-                    ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
-                    Exercitation veniam consequat sunt nostrud amet.
+                   Welcome to Sugar It Café! We have delicious desserts, great coffee, and tasty food, including options for people with different diets. Our café is cozy and perfect for people who love to read books. You can relax with a book or chat with friends while enjoying our comfy seats and with a  homely environment . Our staff is friendly and ready to make your visit enjoyable. Come hang out at Sugar It Café it like your second home!
                 </p>
+                
 
                 <p className="mt-4 text-xl text-gray-600 md:mt-8">
                     <span className="relative inline-block">
