@@ -10,8 +10,8 @@ function NavList() {
         </Link>
       </li>
       <li className="font-medium">
-        <Link to="/account" className="hover:text-blue-500 transition-colors text-blue-gray-900">
-          Account
+        <Link to="/events" className="hover:text-blue-500 transition-colors text-blue-gray-900">
+          Events
         </Link>
       </li>
       <li className="font-medium">

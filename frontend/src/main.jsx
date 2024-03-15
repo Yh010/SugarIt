@@ -11,6 +11,7 @@ import { Navbar } from '@material-tailwind/react'
 import Menu from './pages/Menu/Menu.jsx';
 import AboutUs from './pages/AboutUs/AboutUs.jsx';
 import Books from './pages/Books/Books.jsx';
+import Event from './pages/Event.jsx';
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,9 @@ const router = createBrowserRouter([
   {
     path: "/books",
     element: <Books/>
+  },{
+    path: "/events",
+    element: <Event/>
   }
 ]);
 
