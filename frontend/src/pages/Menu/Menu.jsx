@@ -21,11 +21,11 @@ function Menu() {
 
     return (
         <div>
-            <main>
-                <section className="menu section">
-                    <div className="title">
-                    <h2>our menu</h2>
-                    <div className="underline"></div>
+            <main className='bg-gray-300'>
+                <section className="menu section py-20">
+                    <div className="title text-center mb-8">
+                        <h2 className='text-4xl font-sans font-bold block'>Our Menu</h2>
+                        <div className='underline w-20 h-1 bg-black mx-auto'></div>
                     </div>
                     <Categories categories={categories} filterItems={filterItems} />
                     <MenuBox items={menuItems} />
