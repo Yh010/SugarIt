@@ -22,7 +22,7 @@ const router = createBrowserRouter([
   {
     path: "/AboutUs",
     element: <AboutUs/>
-  }
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

@@ -4,6 +4,7 @@ import { ScrollPics} from './components/ScrollPics'
 import Footer from './components/footer'
 import {  NavbarTop } from './components/Navbar'
 import TodaysSpecial from './components/TodaySpecialComponents/TodaySpecial'
+import Offers from './components/Offers/Offers'
 
 
 function App() {
@@ -11,7 +12,10 @@ function App() {
     <div>
       <div>
         <NavbarTop />
-        <TodaysSpecial/>
+        <div className='flex justify-evenly mt-4'>
+            <Offers/>
+          <TodaysSpecial/>
+        </div>
         <ScrollPics/>
       </div>
      <Footer/>
