@@ -1,28 +1,28 @@
-import React from "react";
 import { Navbar, Typography } from "@material-tailwind/react";
+import { Link } from "react-router-dom";
 
 function NavList() {
   return (
     <ul className="flex flex-row gap-4 lg:gap-6">
       <li className="font-medium">
-        <a href="#" className="hover:text-blue-500 transition-colors text-blue-gray-900">
+        <Link to="/menu" className="hover:text-blue-500 transition-colors text-blue-gray-900">
           Menu
-        </a>
+        </Link>
       </li>
       <li className="font-medium">
-        <a href="#" className="hover:text-blue-500 transition-colors text-blue-gray-900">
+        <Link to="/account" className="hover:text-blue-500 transition-colors text-blue-gray-900">
           Account
-        </a>
+        </Link>
       </li>
       <li className="font-medium">
-        <a href="#" className="hover:text-blue-500 transition-colors text-blue-gray-900">
-          Blocks
-        </a>
+        <Link to="/books" className="hover:text-blue-500 transition-colors text-blue-gray-900">
+          Books
+        </Link>
       </li>
       <li className="font-medium">
-        <a href="#" className="hover:text-blue-500 transition-colors text-blue-gray-900">
-          Docs
-        </a>
+        <Link to="/AboutUs" className="hover:text-blue-500 transition-colors text-blue-gray-900">
+          About Us
+        </Link>
       </li>
     </ul>
   );
