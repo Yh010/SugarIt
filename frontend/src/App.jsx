@@ -3,7 +3,7 @@ import { useState } from 'react'
 import './App.css'
 import { ScrollPics} from './components/ScrollPics'
 import {  NavbarTop } from './components/Navbar'
-import {Event} from './pages/Event'
+import Event from './pages/Event'
 
 
 function App() {
@@ -14,7 +14,6 @@ function App() {
       <div>
         <NavbarTop/>
         {/* <ScrollPics/> */}
-      <Event></Event>
       </div>
      
     </div>
