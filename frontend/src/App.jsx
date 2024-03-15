@@ -3,14 +3,15 @@ import './App.css'
 import { ScrollPics} from './components/ScrollPics'
 import Footer from './components/footer'
 import {  NavbarTop } from './components/Navbar'
-
+import TodaysSpecial from './components/TodaySpecialComponents/TodaySpecial'
 
 
 function App() {
   return (
     <div>
       <div>
-        <NavbarTop/>
+        <NavbarTop />
+        <TodaysSpecial/>
         <ScrollPics/>
       </div>
      <Footer/>
