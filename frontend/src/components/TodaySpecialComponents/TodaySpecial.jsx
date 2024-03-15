@@ -10,6 +10,7 @@ import {
   Card,
 } from "@material-tailwind/react";
 import { useState } from "react";
+import { TodaySpecialCarousel } from "./TodaySpecialCarousel";
 export default function TodaysSpecial() {
     const [open, setOpen] = useState(false);
     const [isFavorite, setIsFavorite] = useState(false);
@@ -35,8 +36,8 @@ export default function TodaysSpecial() {
             <Avatar
               size="sm"
               variant="circular"
-              alt="tania andrew"
-              src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"
+              alt="Sugar It"
+              src="https://content.jdmagicbox.com/comp/rourkela/w3/9999px661.x661.211116002408.l9w3/catalogue/sugar-it-cafe-and-bake-shop-koel-nagar-rourkela-fast-food-vljw02cbxg.jpg"
             />
             <div className="-mt-px flex flex-col">
               <Typography
@@ -44,14 +45,14 @@ export default function TodaysSpecial() {
                 color="blue-gray"
                 className="font-medium"
               >
-                Tania Andrew
+                "People who love to eat are always the best people." 
               </Typography>
               <Typography
                 variant="small"
                 color="gray"
                 className="text-xs font-normal"
               >
-                @emmaroberts
+                Julia Child
               </Typography>
             </div>
           </div>
@@ -72,44 +73,21 @@ export default function TodaysSpecial() {
               </svg>
             </IconButton>
             <Button color="gray" size="sm">
-              Free Download
+              Order Now!
             </Button>
           </div>
         </DialogHeader>
         <DialogBody>
-          <img
-            alt="nature"
-            className="h-[48rem] w-full rounded-lg object-cover object-center"
-            src="https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2717&q=80"
-          />
+          <TodaySpecialCarousel/>
         </DialogBody>
         <DialogFooter className="justify-between">
           <div className="flex items-center gap-16">
             <div>
               <Typography variant="small" color="gray" className="font-normal">
-                Views
-              </Typography>
-              <Typography color="blue-gray" className="font-medium">
-                44,082,044
-              </Typography>
-            </div>
-            <div>
-              <Typography variant="small" color="gray" className="font-normal">
-                Downloads
-              </Typography>
-              <Typography color="blue-gray" className="font-medium">
-                553,031
+                Take a look at this week's special items!
               </Typography>
             </div>
           </div>
-          <Button
-            size="sm"
-            variant="outlined"
-            color="blue-gray"
-            className="mr-5 flex items-center"
-          >
-            Share
-          </Button>
         </DialogFooter>
       </Dialog>
         </div>
