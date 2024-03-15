@@ -28,22 +28,16 @@ const CategoryCard = ({ title, imageUrl }) => {
     );
 };
 
-
-
 const CategoriesSection = () => {
     const scrollRef = useRef(null); 
-
     useEffect(() => { 
         const scrollElement = scrollRef.current;
-
         const startScroll = () => {
             if (scrollElement) {
                 scrollElement.scrollLeft += 1;
             }
         };
-
         const intervalId = setInterval(startScroll, 10);
-
         return () => clearInterval(intervalId);
     }, []);
 
@@ -80,9 +74,7 @@ const CategoriesSection = () => {
 
 const typesofcards = () => {
     return (
-        <div className=" flex flex-col space-y-20">
-
-            
+        <div className=" flex flex-col space-y-20">          
             <div style={{ display: 'flex', justifyContent: "center" }} className='flex space-x-20'>
                 <div style={{ marginLeft: '2%' }}></div>
                 <div style={{ display: 'flex' }}>
@@ -90,10 +82,7 @@ const typesofcards = () => {
                         <CategoryCard title="Corporate" imageUrl="https://media.istockphoto.com/id/868408746/photo/assorted-indian-dish.jpg?s=612x612&w=0&k=20&c=XLsAk571Z2kEe_x6TnXWSzsG95-2agp-TcYswQrKHuo=" />
                         <div style={{ width: '43%' }}> <p className='italic ' style={{textAlign:'justify'}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p> </div>
                     </div></div>
-
-
             </div>
-
 
             <div style={{ display: 'flex', justifyContent: "center" }} className='flex space-x-10 pr-20'>
                 <div style={{ marginLeft: '5%' }}></div>
@@ -101,11 +90,7 @@ const typesofcards = () => {
                     <div style={{ width: '46%' }}> <p className='italic' style={{textAlign:'justify'}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p> </div><div>
                         <CategoryCard title="Parties" imageUrl="https://media.istockphoto.com/id/868408746/photo/assorted-indian-dish.jpg?s=612x612&w=0&k=20&c=XLsAk571Z2kEe_x6TnXWSzsG95-2agp-TcYswQrKHuo=" />
                     </div></div>
-
-
             </div>
-
-
 
             <div style={{ display: 'flex', justifyContent: "center" }} className='flex space-x-20'>
                 <div style={{ marginLeft: '2%' }}></div>
@@ -114,10 +99,7 @@ const typesofcards = () => {
                         <CategoryCard title="Wedding" imageUrl="https://media.istockphoto.com/id/868408746/photo/assorted-indian-dish.jpg?s=612x612&w=0&k=20&c=XLsAk571Z2kEe_x6TnXWSzsG95-2agp-TcYswQrKHuo=" />
                         <div style={{ width: '43%' }}> <p className='italic' style={{textAlign:'justify'}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p> </div>
                     </div></div>
-
-
             </div>
-
 
             <div style={{ display: 'flex', justifyContent: "center" }} className='flex space-x-10 pr-20'>
                 <div style={{ marginLeft: '5%' }}></div>
@@ -125,27 +107,15 @@ const typesofcards = () => {
                     <div style={{ width: '46%' }}> <p className='italic' style={{textAlign:'justify'}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p> </div><div>
                         <CategoryCard title="Event Planning" imageUrl="https://media.istockphoto.com/id/868408746/photo/assorted-indian-dish.jpg?s=612x612&w=0&k=20&c=XLsAk571Z2kEe_x6TnXWSzsG95-2agp-TcYswQrKHuo=" />
                     </div></div>
-
-
             </div>
-
             <div style={{ height: '40px' }}></div>
         </div>       
-
     );
 };
 
 
-
-
-
-
-
-
 const Event = () => (
     <div>
-
-
         <WelcomeSection />        
         <CategoriesSection />
         {<div style={{ height: '100px' }}></div>}
