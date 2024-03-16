@@ -10,6 +10,7 @@ import './index.css'
 import Menu from './pages/Menu/Menu.jsx';
 import AboutUs from './pages/AboutUs/AboutUs.jsx';
 import Books from './pages/Books/Books.jsx';
+import Forum from './pages/Forum/Forum.jsx';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
   {
     path: "/books",
     element: <Books/>
+  },
+  {
+    path: "/forum",
+    element: <Forum/>
   }
 ]);
 
