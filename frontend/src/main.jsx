@@ -29,11 +29,13 @@ const router = createBrowserRouter([
     element: <Books/>
   }
 ]);
+=======
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ChakraProvider>
        <RouterProvider router={router} />
+      {/* <Navbar/> */}
     </ChakraProvider>
   </React.StrictMode>,
 )
