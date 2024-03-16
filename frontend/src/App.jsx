@@ -5,7 +5,7 @@ import Footer from './components/footer'
 import {  NavbarTop } from './components/Navbar'
 import TodaysSpecial from './components/TodaySpecialComponents/TodaySpecial'
 import Offers from './components/Offers/Offers'
-import {Event} from './pages/Event'
+import Event from './pages/Event'
 
 
 function App() {
@@ -20,7 +20,10 @@ function App() {
         <ScrollPics/>
         <NavbarTop/>
         {/* <ScrollPics/> */}
+<<<<<<< HEAD
       <Event/>
+=======
+>>>>>>> b1f7668 (cleanup)
       </div>
      <Footer/>
     </div>
