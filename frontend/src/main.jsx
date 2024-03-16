@@ -33,12 +33,12 @@ const router = createBrowserRouter([
     element: <Event/>
   }
 ]);
-=======
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ChakraProvider>
       <RouterProvider router={router} />
+      {/* <Navbar/> */}
     </ChakraProvider>
   </React.StrictMode>,
 )

@@ -12,15 +12,14 @@ function App() {
   return (
     <div>
       <div>
+        <NavbarTop/>
         {/* <ScrollPics/> */}
-        <NavbarTop />
         <div className='flex justify-evenly mt-4'>
             <Offers/>
           <TodaysSpecial/>
         </div>
         <ScrollPics/>
         {/* <ScrollPics/> */}
-      <Event/>
       </div>
      <Footer/>
     </div>
