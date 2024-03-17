@@ -11,16 +11,17 @@ import Event from './pages/Event'
 function App() {
   return (
     <div>
-      <div>
+      <div style={{padding:0,margin:0 , position:'relative'}}>
+         
+        {/* <NavbarTop/> */}
+        <ScrollPics/>
         <NavbarTop/>
-        {/* <ScrollPics/> */}
+       </div>
         <div className='flex justify-evenly mt-4'>
             <Offers/>
           <TodaysSpecial/>
         </div>
-        <ScrollPics/>
-        {/* <ScrollPics/> */}
-      </div>
+        
      <Footer/>
     </div>
   )

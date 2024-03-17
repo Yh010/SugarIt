@@ -1,0 +1,14 @@
+.navbar-top { /* You might need to adjust the class name to match your setup */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 10px;
+    z-index: 10; /* Ensure the navbar is above the carousel */
+    opacity: 0.8;
+  }
+
+
+  .navbar-top > nav {
+    background: white; /* Or any color you want */
+  }

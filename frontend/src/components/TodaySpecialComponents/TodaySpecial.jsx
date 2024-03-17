@@ -12,16 +12,16 @@ import {
 import { useState } from "react";
 import { TodaySpecialCarousel } from "./TodaySpecialCarousel";
 export default function TodaysSpecial() {
-    const [open, setOpen] = useState(false);
-    const [isFavorite, setIsFavorite] = useState(false);
- 
-    const handleOpen = () => setOpen((cur) => !cur);
-    const handleIsFavorite = () => setIsFavorite((cur) => !cur);
+  const [open, setOpen] = useState(false);
+  const [isFavorite, setIsFavorite] = useState(false);
 
-    return (
-        <div className="flex justify-end">
-            <Card
-        className="h-50 w-80 cursor-pointer overflow-hidden transition-opacity hover:opacity-90"
+  const handleOpen = () => setOpen((cur) => !cur);
+  const handleIsFavorite = () => setIsFavorite((cur) => !cur);
+
+  return (
+    <div className="flex justify-end">
+      <Card
+        className="h-50 w-50 cursor-pointer overflow-hidden transition-opacity hover:opacity-70"
         onClick={handleOpen}
       >
         <img
@@ -30,7 +30,7 @@ export default function TodaysSpecial() {
           src="https://t4.ftcdn.net/jpg/03/13/59/89/360_F_313598999_NCwASLAcQW4xvRkZjFti5b8ejh94GD7T.jpg"
         />
       </Card>
-       <Dialog size="xl" open={open} handler={handleOpen}>
+      <Dialog size="xl" open={open} handler={handleOpen}>
         <DialogHeader className="justify-between">
           <div className="flex items-center gap-3">
             <Avatar
@@ -45,7 +45,7 @@ export default function TodaysSpecial() {
                 color="blue-gray"
                 className="font-medium"
               >
-                "People who love to eat are always the best people." 
+                "People who love to eat are always the best people."
               </Typography>
               <Typography
                 variant="small"
@@ -78,7 +78,7 @@ export default function TodaysSpecial() {
           </div>
         </DialogHeader>
         <DialogBody>
-          <TodaySpecialCarousel/>
+          <TodaySpecialCarousel />
         </DialogBody>
         <DialogFooter className="justify-between">
           <div className="flex items-center gap-16">
@@ -90,7 +90,7 @@ export default function TodaysSpecial() {
           </div>
         </DialogFooter>
       </Dialog>
-        </div>
-    )
-} 
+    </div>
+  )
+}
 

@@ -21,17 +21,18 @@ export default function Offers() {
 
     return (
         <div className="flex justify-end">
-            <Card
+            <Button
         className="h-50 w-30
          cursor-pointer overflow-hidden transition-opacity hover:opacity-90"
         onClick={handleOpen}
+        style={{background:'white'}}
       >
         <img
           alt="nature"
           className="h-full w-full object-cover object-center"
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRvz9QxNhJC-0pdl3qdxLVmkBffPG61yx4Eg&usqp=CAU"
         />
-      </Card>
+      </Button>
        <Dialog size="xl" open={open} handler={handleOpen}>
         <DialogHeader className="justify-between">
           <div className="flex items-center gap-3">
