@@ -39,7 +39,9 @@ export function NavbarTop() {
         variant="h5"
         className="text-blue-gray-900 cursor-pointer"
       >
-        SugarIt
+       <Link to="/">
+          SugarIt
+        </Link>
       </Typography>
       <div className="lg:flex justify-end">
         <NavList />

@@ -1,6 +1,6 @@
 import { Carousel } from "@material-tailwind/react";
  
-export function ScrollPics() {
+export default function ScrollPics() {
     return (
         <div className="flex justify-center items-center h-screen">
             <Carousel

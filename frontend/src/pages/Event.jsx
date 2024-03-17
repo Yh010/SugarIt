@@ -7,12 +7,12 @@ const WelcomeSection = () => (
     </div>
 );
 
-const Category = ({ title, imageUrl }) => (
-    <div className="overflow-hidden">
-        <img src={imageUrl} alt={title} className="hover:scale-110 transition-transform duration-300" />
-        <h3 className="text-2xl font-bold mt-4">{title}</h3>
-    </div>
-);
+// const Category = ({ title, imageUrl }) => (
+//     <div className="overflow-hidden">
+//         <img src={imageUrl} alt={title} className="hover:scale-110 transition-transform duration-300" />
+//         <h3 className="text-2xl font-bold mt-4">{title}</h3>
+//     </div>
+// );
 const CategoryCard = ({ title, imageUrl }) => {
     return (
         <div className="relative overflow-hidden">
@@ -42,30 +42,30 @@ const CategoriesSection = () => {
     }, []);
 
     return (
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style={{ overflowX: 'hidden' }}>
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel" style={{ overflowX: 'hidden' }}>
+            <ol className="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
             </ol>
-            <div class="flexcarousel-inner">
-                <div class="carousel-item active">
-                    <img style={{ height: '600px', width: '350px' }} class="d-block w-100" src="https://media.istockphoto.com/id/868408746/photo/assorted-indian-dish.jpg?s=612x612&w=0&k=20&c=XLsAk571Z2kEe_x6TnXWSzsG95-2agp-TcYswQrKHuo=" alt="First slide" />
+            <div className="flexcarousel-inner">
+                <div className="carousel-item active">
+                    <img style={{ height: '600px', width: '350px' }} className="d-block w-100" src="https://media.istockphoto.com/id/868408746/photo/assorted-indian-dish.jpg?s=612x612&w=0&k=20&c=XLsAk571Z2kEe_x6TnXWSzsG95-2agp-TcYswQrKHuo=" alt="First slide" />
                 </div>
-                <div class="carousel-item">
-                    <img style={{ height: '600px', width: '350px' }} class="d-block w-100" src="https://media.istockphoto.com/id/868408746/photo/assorted-indian-dish.jpg?s=612x612&w=0&k=20&c=XLsAk571Z2kEe_x6TnXWSzsG95-2agp-TcYswQrKHuo=" alt="Second slide" />
+                <div className="carousel-item">
+                    <img style={{ height: '600px', width: '350px' }} className="d-block w-100" src="https://media.istockphoto.com/id/868408746/photo/assorted-indian-dish.jpg?s=612x612&w=0&k=20&c=XLsAk571Z2kEe_x6TnXWSzsG95-2agp-TcYswQrKHuo=" alt="Second slide" />
                 </div>
-                <div class="carousel-item">
-                    <img style={{ height: '600px', width: '350px' }} class="d-block w-100" src="https://media.istockphoto.com/id/868408746/photo/assorted-indian-dish.jpg?s=612x612&w=0&k=20&c=XLsAk571Z2kEe_x6TnXWSzsG95-2agp-TcYswQrKHuo=" alt="Third slide" />
+                <div className="carousel-item">
+                    <img style={{ height: '600px', width: '350px' }} className="d-block w-100" src="https://media.istockphoto.com/id/868408746/photo/assorted-indian-dish.jpg?s=612x612&w=0&k=20&c=XLsAk571Z2kEe_x6TnXWSzsG95-2agp-TcYswQrKHuo=" alt="Third slide" />
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
+            <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span className="sr-only">Previous</span>
             </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
+            <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                <span className="sr-only">Next</span>
             </a>
         </div>
     );
