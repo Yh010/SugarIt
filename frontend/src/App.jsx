@@ -7,6 +7,7 @@ import AboutUs from './pages/AboutUs/AboutUs'
 import './App.css'
 import Books from './pages/Books/Books'
 import Event from './pages/Event'
+import Forum from './pages/Forum/Forum'
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path='/AboutUs' element = { <AboutUs/> }/>
         <Route path='/books' element = { <Books /> }/>
         <Route path='/events' element = { <Event/> }/>
+        <Route path='/forum' element = { <Forum/> }/>
         </Routes>
       </main>
       <Footer />
