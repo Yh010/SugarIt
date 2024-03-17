@@ -1,11 +1,13 @@
 import { Rating } from "@material-tailwind/react";
+import SearchBox from "./SearchBox";
+import { useState } from "react";
 const posts = [
   {
     id: 1,
-    title: 'Boost your conversion rate',
+    title: 'Amazing Pav Bhaji',
     href: '#',
     description:
-      'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
+      'Your pav bhaji from Sugar Cafe is an absolute delight! The rich blend of flavors, the perfect balance of spices, and the hearty texture make it a culinary masterpiece. Each bite is a journey through a symphony of tastes that leaves me craving for more. It is evident that it is crafted with passion and expertise. Kudos to Sugar Cafe for serving such an outstanding dish!',
     date: 'Mar 16, 2020',
     datetime: '2020-03-16',
     category: { title: 'Marketing', href: '#' },
@@ -19,10 +21,10 @@ const posts = [
     },
     {
     id: 2,
-    title: 'Boost your conversion rate',
+    title: 'Masala Dosa',
     href: '#',
     description:
-      'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
+      'Sugar Cafe masala dosa is a true marvel! The crispy exterior perfectly complements the flavorful potato filling inside. It is a delightful experience of South Indian cuisine that never fails to impress.',
     date: 'Mar 16, 2020',
     datetime: '2020-03-16',
     category: { title: 'Marketing', href: '#' },
@@ -36,10 +38,10 @@ const posts = [
     },
     {
     id: 3,
-    title: 'Boost your conversion rate',
+    title: 'Paneer Tikka',
     href: '#',
     description:
-      'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
+      'The paneer tikka at Sugar Cafe is simply divine! Each tender piece of paneer is marinated to perfection, bursting with aromatic spices and grilled to just the right level of char. It is a tantalizing dish that always leaves me wanting more.',
     date: 'Mar 16, 2020',
     datetime: '2020-03-16',
     category: { title: 'Marketing', href: '#' },
@@ -53,10 +55,10 @@ const posts = [
     },
     {
     id: 4,
-    title: 'Boost your conversion rate',
+    title: 'Vegetable Biryani',
     href: '#',
     description:
-      'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
+      'Sugar Cafe vegetable biryani is a celebration of flavors! The fragrant basmati rice cooked with an assortment of vegetables and aromatic spices creates a harmonious blend that transports the taste buds to culinary paradise. It is a dish that never fails to satisfy.',
     date: 'Mar 16, 2020',
     datetime: '2020-03-16',
     category: { title: 'Marketing', href: '#' },
@@ -70,10 +72,10 @@ const posts = [
     },
     {
     id: 5,
-    title: 'Boost your conversion rate',
+    title: 'Chicken Tikka Masala:',
     href: '#',
     description:
-      'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
+      'Sugar Cafe chicken tikka masala is a culinary masterpiece! The tender chicken pieces cooked in a creamy tomato-based sauce, infused with aromatic spices, create a dish that is simply irresistible. It is comfort food at its finest.',
     date: 'Mar 16, 2020',
     datetime: '2020-03-16',
     category: { title: 'Marketing', href: '#' },
@@ -87,10 +89,10 @@ const posts = [
     },
     {
     id: 6,
-    title: 'Boost your conversion rate',
+    title: 'Chole Bhature',
     href: '#',
     description:
-      'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
+      'Indulging in Sugar Cafe chole bhature is always a treat! The fluffy bhature paired with the hearty and flavorful chole is a match made in heaven. Each bite is a burst of authenticity and deliciousness that keeps me coming back for more.',
     date: 'Mar 16, 2020',
     datetime: '2020-03-16',
     category: { title: 'Marketing', href: '#' },
@@ -106,10 +108,20 @@ const posts = [
 ]
 
 export default function Bento() {
+  const [searchTerm, setSearchTerm] = useState("");
+  const handleSearchInputChange = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
+  const filteredPosts = searchTerm.trim() === "" 
+    ? posts 
+    : posts.filter(post => post.description.toLowerCase().includes(searchTerm.toLowerCase()));
+
+
     return (
         <div className="bg-white py-24 sm:py-32">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                <div className="flex mx-auto max-w-2xl lg:mx-0">
+                  <div className="flex mx-auto max-w-2xl lg:mx-0">
                     <div>
                         <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Dive into the Sugar It community</h2>
                         <p className="mt-2 text-lg leading-8 text-gray-600">
@@ -124,9 +136,11 @@ export default function Bento() {
                     <div>
                         <img src="https://img.freepik.com/free-vector/gradient-lo-fi-illustrations_52683-84144.jpg?size=338&ext=jpg&ga=GA1.1.735520172.1710460800&semt=sph"/>
                     </div>
-                </div>
+          </div>
+          <br></br>
+                <SearchBox searchTerm={searchTerm} handleSearchInputChange={handleSearchInputChange}/>
                 <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-                    {posts.map((post) => (
+                    {filteredPosts.map((post) => (
                         <article key={post.id} className="flex max-w-xl flex-col items-start justify-between">
                             <div className="flex items-center gap-x-4 text-xs">
                                 <time dateTime={post.datetime} className="text-gray-500">
