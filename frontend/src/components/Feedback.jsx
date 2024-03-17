@@ -7,7 +7,7 @@ import {
   DialogFooter,
 } from "@material-tailwind/react";
  
-export function Feedback() {
+export default function Feedback() {
   const [open, setOpen] = React.useState(false);
  
   const handleOpen = () => setOpen(!open);
