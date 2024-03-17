@@ -7,9 +7,9 @@ export default withMT({
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: { spacing: {
-      '3px': '3px',
-    }},
+    // extend: { spacing: {
+    //   '3px': '3px',
+    // }},
   },
   plugins: [],
 });
