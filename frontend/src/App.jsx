@@ -8,6 +8,7 @@ import './App.css'
 import Books from './pages/Books/Books'
 import Event from './pages/Event'
 import Forum from './pages/Forum/Forum'
+import PaymentCheckout from './pages/Payments/Checkout'
 
 
 function App() {
@@ -24,7 +25,9 @@ function App() {
         <Route path='/AboutUs' element = { <AboutUs/> }/>
         <Route path='/books' element = { <Books /> }/>
         <Route path='/events' element = { <Event/> }/>
-        <Route path='/forum' element = { <Forum/> }/>
+        <Route path='/forum' element={<Forum />} />
+        <Route path='/checkout' element = { <PaymentCheckout/>}/>
+        
         </Routes>
       </main>
       <Footer />
