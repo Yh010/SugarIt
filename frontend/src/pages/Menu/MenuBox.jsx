@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 
 import AddtoCartButton from "../../components/PaymentComponents/AddtoCartButton"
+import ViewReviewsButton from "../../components/PaymentComponents/ViewReviewsButton"
 
 // eslint-disable-next-line react/prop-types
 const MenuBox = ({items}) => {
@@ -21,7 +22,8 @@ const MenuBox = ({items}) => {
                     <p className="item-text text-sm">{desc}</p>
                   </div>
                   <div >
-                    <AddtoCartButton/>
+                  <AddtoCartButton />
+                  <ViewReviewsButton/>
                   </div>
               </div>
             </div>
