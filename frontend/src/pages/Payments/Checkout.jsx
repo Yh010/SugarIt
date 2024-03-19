@@ -1,32 +1,43 @@
-import { CheckIcon } from '@heroicons/react/20/solid'
-import { useSelector, useDispatch } from 'react-redux'
-
-const includedFeatures = [
-  'Private forum access',
-  'Member resources',
-  'Entry to annual conference',
-  'Official member t-shirt',
-]
+import { CheckIcon } from '@heroicons/react/20/solid';
+import { useSelector } from 'react-redux';
 
 export default function PaymentCheckout() {
-
   const cartItems = useSelector(state => state.cartItems);
-  console.log(cartItems);
+
+  function consolidateCartItems(cartItems) {
+    // Create an object to store consolidated items
+    const consolidatedItems = {};
+    
+    // Iterate over each item in cartItems
+    cartItems.forEach(item => {
+      if (consolidatedItems[item.title]) {
+        // If the item title already exists in consolidatedItems, add its price to the existing total
+        consolidatedItems[item.title].price += item.price;
+      } else {
+        // If the item title does not exist, add it to consolidatedItems
+        consolidatedItems[item.title] = { ...item };
+      }
+    });
+    
+    // Convert consolidatedItems object back to an array
+    const consolidatedArray = Object.values(consolidatedItems);
+
+    return consolidatedArray;
+  }
+
+  const consolidatedCartItems = consolidateCartItems(cartItems);
 
   function calculateTotalofPrice(cartItems) {
-   if (!Array.isArray(cartItems) || cartItems.length === 0) {
-        return 0;
+    if (!Array.isArray(cartItems) || cartItems.length === 0) {
+      return 0;
     }
-
-    // Use reduce to sum up the prices of all items in the cart
     const totalPrice = cartItems.reduce((total, item) => {
-        return total + item.price;
+      return total + item.price;
     }, 0);
-
     return totalPrice; 
   }
-  const totalPrice = calculateTotalofPrice(cartItems);
-console.log(totalPrice);
+
+  const totalPrice = calculateTotalofPrice(consolidatedCartItems);
 
   return (
     <div className="bg-white py-24 sm:py-32">
@@ -53,10 +64,11 @@ console.log(totalPrice);
               role="list"
               className="mt-8 grid grid-cols-1 gap-4 text-sm leading-6 text-gray-600 sm:grid-cols-2 sm:gap-6"
             >
-              {includedFeatures.map((feature) => (
-                <li key={feature} className="flex gap-x-3">
+              {consolidatedCartItems.map((item) => (
+                <li key={item.id} className="flex gap-x-3">
                   <CheckIcon className="h-6 w-5 flex-none text-indigo-600" aria-hidden="true" />
-                  {feature}
+                  <span>{item.title}</span>
+                  <span className="text-gray-500"> - Rs {item.price}</span>
                 </li>
               ))}
             </ul>
@@ -66,8 +78,8 @@ console.log(totalPrice);
               <div className="mx-auto max-w-xs px-8">
                 <p className="text-base font-semibold text-gray-600">Pay once, own it forever</p>
                 <p className="mt-6 flex items-baseline justify-center gap-x-2">
-                  <span className="text-5xl font-bold tracking-tight text-gray-900">{ totalPrice}</span>
-                  <span className="text-sm font-semibold leading-6 tracking-wide text-gray-600">USD</span>
+                  <span className="text-5xl font-bold tracking-tight text-gray-900">{totalPrice}</span>
+                  <span className="text-sm font-semibold leading-6 tracking-wide text-gray-600">Rs</span>
                 </p>
                 <a
                   href="#"
