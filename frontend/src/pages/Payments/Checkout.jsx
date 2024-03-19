@@ -1,4 +1,5 @@
 import { CheckIcon } from '@heroicons/react/20/solid'
+import { useSelector, useDispatch } from 'react-redux'
 
 const includedFeatures = [
   'Private forum access',
@@ -8,6 +9,9 @@ const includedFeatures = [
 ]
 
 export default function PaymentCheckout() {
+
+  const cartItems = useSelector(state => state.cartItems);
+  console.log(cartItems);
   return (
     <div className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
