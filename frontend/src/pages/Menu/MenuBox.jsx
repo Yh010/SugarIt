@@ -22,7 +22,7 @@ const MenuBox = ({items}) => {
                     <p className="item-text text-sm">{desc}</p>
                   </div>
                   <div >
-                  <AddtoCartButton id={ id} price={ price} />
+                  <AddtoCartButton id={ id} price={ price} title={title}/>
                   <ViewReviewsButton/>
                   </div>
               </div>

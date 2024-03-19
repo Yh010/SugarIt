@@ -3,12 +3,12 @@ import { useDispatch } from 'react-redux';
 import { addItem } from "../../features/cart/CartSlice";
 
 
-export default function AddtoCartButton({id,price}) {
+export default function AddtoCartButton({id,title,price}) {
 
     const dispatch = useDispatch()
     const addItemHandler = () => {
-        dispatch(addItem({ id, price }));
-        console.log(id,price);
+        dispatch(addItem({ id, title,price}));
+        console.log(id,price,title);
 
     }
 

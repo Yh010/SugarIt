@@ -12,6 +12,22 @@ export default function PaymentCheckout() {
 
   const cartItems = useSelector(state => state.cartItems);
   console.log(cartItems);
+
+  function calculateTotalofPrice(cartItems) {
+   if (!Array.isArray(cartItems) || cartItems.length === 0) {
+        return 0;
+    }
+
+    // Use reduce to sum up the prices of all items in the cart
+    const totalPrice = cartItems.reduce((total, item) => {
+        return total + item.price;
+    }, 0);
+
+    return totalPrice; 
+  }
+  const totalPrice = calculateTotalofPrice(cartItems);
+console.log(totalPrice);
+
   return (
     <div className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -50,7 +66,7 @@ export default function PaymentCheckout() {
               <div className="mx-auto max-w-xs px-8">
                 <p className="text-base font-semibold text-gray-600">Pay once, own it forever</p>
                 <p className="mt-6 flex items-baseline justify-center gap-x-2">
-                  <span className="text-5xl font-bold tracking-tight text-gray-900">$349</span>
+                  <span className="text-5xl font-bold tracking-tight text-gray-900">{ totalPrice}</span>
                   <span className="text-sm font-semibold leading-6 tracking-wide text-gray-600">USD</span>
                 </p>
                 <a
