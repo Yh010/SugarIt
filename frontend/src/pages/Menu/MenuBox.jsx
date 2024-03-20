@@ -1,4 +1,8 @@
 /* eslint-disable react/prop-types */
+
+import AddtoCartButton from "../../components/PaymentComponents/AddtoCartButton"
+import ViewReviewsButton from "../../components/PaymentComponents/ViewReviewsButton"
+
 // eslint-disable-next-line react/prop-types
 const MenuBox = ({items}) => {
   return (
@@ -9,11 +13,19 @@ const MenuBox = ({items}) => {
           <article key={id} className="menu-item grid grid-cols-2 gap-y-4 gap-x-4 max-w-md">
             <img src={img} alt={title} className="photo object-fit-cover w-full h-52 border-black border rounded-md block" />
             <div className="item-info">
-              <header className="flex justify-between border-b-[1px] border-dotted border-black">
-                <h4 className="font-bold">{title}</h4>
-                <h4 className="price text-black font-bold">N{price}</h4>
-              </header>
-              <p className="item-text text-sm">{desc}</p>
+              <div className="justify-between">
+                  <div>
+                    <header className="flex justify-between border-b-[1px] border-dotted border-black">
+                      <h4 className="font-bold">{title}</h4>
+                      <h4 className="price text-black font-bold">Rs {price}</h4>
+                    </header>
+                    <p className="item-text text-sm">{desc}</p>
+                  </div>
+                  <div >
+                  <AddtoCartButton id={ id} price={ price} title={title}/>
+                  <ViewReviewsButton/>
+                  </div>
+              </div>
             </div>
           </article>
         )
