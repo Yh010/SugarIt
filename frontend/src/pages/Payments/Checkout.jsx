@@ -1,5 +1,6 @@
 import { CheckIcon } from '@heroicons/react/20/solid';
 import { useSelector } from 'react-redux';
+import RemoveItemButton from '../../components/PaymentComponents/RemoveItemButton';
 
 export default function PaymentCheckout() {
   const cartItems = useSelector(state => state.cartItems);
@@ -69,6 +70,7 @@ export default function PaymentCheckout() {
                   <CheckIcon className="h-6 w-5 flex-none text-indigo-600" aria-hidden="true" />
                   <span>{item.title}</span>
                   <span className="text-gray-500"> - Rs {item.price}</span>
+                  <RemoveItemButton id={ item.id} />
                 </li>
               ))}
             </ul>
