@@ -1,13 +1,41 @@
-import { CheckIcon } from '@heroicons/react/20/solid'
-
-const includedFeatures = [
-  'Private forum access',
-  'Member resources',
-  'Entry to annual conference',
-  'Official member t-shirt',
-]
+import { CheckIcon } from '@heroicons/react/20/solid';
+import { useSelector } from 'react-redux';
+import RemoveItemButton from '../../components/PaymentComponents/RemoveItemButton';
+import PaymentSuccess from './PaymentSuccess';
 
 export default function PaymentCheckout() {
+  const cartItems = useSelector(state => state.cartItems);
+
+  function consolidateCartItems(cartItems) {
+    
+    const consolidatedItems = {};
+    
+    cartItems.forEach(item => {
+      if (consolidatedItems[item.title]) {
+        consolidatedItems[item.title].price += item.price;
+      } else {
+        consolidatedItems[item.title] = { ...item };
+      }
+    });
+    const consolidatedArray = Object.values(consolidatedItems);
+
+    return consolidatedArray;
+  }
+
+  const consolidatedCartItems = consolidateCartItems(cartItems);
+
+  function calculateTotalofPrice(cartItems) {
+    if (!Array.isArray(cartItems) || cartItems.length === 0) {
+      return 0;
+    }
+    const totalPrice = cartItems.reduce((total, item) => {
+      return total + item.price;
+    }, 0);
+    return totalPrice; 
+  }
+
+  const totalPrice = calculateTotalofPrice(consolidatedCartItems);
+
   return (
     <div className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -33,10 +61,12 @@ export default function PaymentCheckout() {
               role="list"
               className="mt-8 grid grid-cols-1 gap-4 text-sm leading-6 text-gray-600 sm:grid-cols-2 sm:gap-6"
             >
-              {includedFeatures.map((feature) => (
-                <li key={feature} className="flex gap-x-3">
+              {consolidatedCartItems.map((item) => (
+                <li key={item.id} className="flex gap-x-3">
                   <CheckIcon className="h-6 w-5 flex-none text-indigo-600" aria-hidden="true" />
-                  {feature}
+                  <span>{item.title}</span>
+                  <span className="text-gray-500"> - Rs {item.price}</span>
+                  <RemoveItemButton id={ item.id} />
                 </li>
               ))}
             </ul>
@@ -46,15 +76,10 @@ export default function PaymentCheckout() {
               <div className="mx-auto max-w-xs px-8">
                 <p className="text-base font-semibold text-gray-600">Pay once, own it forever</p>
                 <p className="mt-6 flex items-baseline justify-center gap-x-2">
-                  <span className="text-5xl font-bold tracking-tight text-gray-900">$349</span>
-                  <span className="text-sm font-semibold leading-6 tracking-wide text-gray-600">USD</span>
+                  <span className="text-5xl font-bold tracking-tight text-gray-900">{totalPrice}</span>
+                  <span className="text-sm font-semibold leading-6 tracking-wide text-gray-600">Rs</span>
                 </p>
-                <a
-                  href="#"
-                  className="mt-10 block w-full rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                >
-                  Get access
-                </a>
+                <PaymentSuccess/>
                 <p className="mt-6 text-xs leading-5 text-gray-600">
                   Invoices and receipts available for easy company reimbursement
                 </p>

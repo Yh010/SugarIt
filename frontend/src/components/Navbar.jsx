@@ -29,6 +29,11 @@ function NavList() {
           Forum
         </Link>
       </li>
+      <li className="font-medium">
+        <Link to="/checkout" className="hover:text-blue-500 transition-colors text-blue-gray-900">
+          Cart
+        </Link>
+      </li>
     </ul>
   );
 }
