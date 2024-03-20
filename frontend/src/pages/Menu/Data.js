@@ -78,6 +78,14 @@ const menu = [
     img:
       'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Eba_and_Efo_riro_%28Vegetable_Soup%29_with_Fish.jpg/220px-Eba_and_Efo_riro_%28Vegetable_Soup%29_with_Fish.jpg',
     desc: `Ẹ̀bà is a staple food mainly eaten in the West African subregion, particularly in Nigeria and some parts of Ghana. It came from Nigeria originally`,
+  },{
+    id: 10,
+    title: 'Potato Twister',
+    category: 'Snacks',
+    price: 385,
+    img:
+      'https://images.pexels.com/photos/2734288/pexels-photo-2734288.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    desc:"A potato twister is a long, deep-fried potato cut in a spiral shape that resembles a tornado. It's a crispy and fun twist on french fries, often served with dips or seasonings.",
   },
 ]
 export default menu
