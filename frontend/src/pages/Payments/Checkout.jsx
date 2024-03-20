@@ -1,26 +1,22 @@
 import { CheckIcon } from '@heroicons/react/20/solid';
 import { useSelector } from 'react-redux';
 import RemoveItemButton from '../../components/PaymentComponents/RemoveItemButton';
+import PaymentSuccess from './PaymentSuccess';
 
 export default function PaymentCheckout() {
   const cartItems = useSelector(state => state.cartItems);
 
   function consolidateCartItems(cartItems) {
-    // Create an object to store consolidated items
+    
     const consolidatedItems = {};
     
-    // Iterate over each item in cartItems
     cartItems.forEach(item => {
       if (consolidatedItems[item.title]) {
-        // If the item title already exists in consolidatedItems, add its price to the existing total
         consolidatedItems[item.title].price += item.price;
       } else {
-        // If the item title does not exist, add it to consolidatedItems
         consolidatedItems[item.title] = { ...item };
       }
     });
-    
-    // Convert consolidatedItems object back to an array
     const consolidatedArray = Object.values(consolidatedItems);
 
     return consolidatedArray;
@@ -83,12 +79,7 @@ export default function PaymentCheckout() {
                   <span className="text-5xl font-bold tracking-tight text-gray-900">{totalPrice}</span>
                   <span className="text-sm font-semibold leading-6 tracking-wide text-gray-600">Rs</span>
                 </p>
-                <a
-                  href="#"
-                  className="mt-10 block w-full rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                >
-                 Pay Now
-                </a>
+                <PaymentSuccess/>
                 <p className="mt-6 text-xs leading-5 text-gray-600">
                   Invoices and receipts available for easy company reimbursement
                 </p>
