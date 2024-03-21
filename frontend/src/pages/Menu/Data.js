@@ -4,7 +4,7 @@ const menu = [
   {
     id: 1,
     title: 'akara and akamu',
-    category: 'breakfast',
+    category: 'beverages',
     price: 1500,
     img:
       'https://ocdn.eu/pulscms-transforms/1/N2Ek9kpTURBXy82ZjFhYTI3NzBjNDhkNDczYTRiMTg2NWE0ZDNmNmFlNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',

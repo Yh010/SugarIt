@@ -2,6 +2,7 @@
 
 import AddtoCartButton from "../../components/PaymentComponents/AddtoCartButton"
 import ViewReviewsButton from "../../components/PaymentComponents/ViewReviewsButton"
+import { Rating } from "@material-tailwind/react";
 
 // eslint-disable-next-line react/prop-types
 const MenuBox = ({items}) => {
@@ -15,28 +16,30 @@ const MenuBox = ({items}) => {
             <div className="item-info flex flex-col justify-between">
               <div className="">
                   <div>
-                    <header className="flex justify-between border-b-[1px] border-dotted border-black">
-                      <h4 className="font-bold">{title}</h4>
-                      <h4 className="price text-black font-bold text-gold">Rs {price}</h4>
-                    </header>
-                  <p className="item-text text-sm text-grey">{desc}</p>
-                  <p>
-                    {foodtype === "non veg" ? (
+                  <header className="flex justify-between border-b-[1px] border-dotted border-black">
+                    <div className="flex">
+                      <h4 className="font-bold">{title}</h4>{foodtype === "non veg" ? (
                         <img
-                          width="48"
-                          height="48"
+                          width="15"
+                          height="15"
                           src="https://img.icons8.com/color/48/non-vegetarian-food-symbol.png"
                           alt="non-vegetarian-food-symbol"
                         />
                       ) : (
                         <img
-                          width="48"
-                          height="48"
+                          width="15"
+                          height="15"
                           src="https://img.icons8.com/color/48/vegetarian-food-symbol.png"
                           alt="vegetarian-food-symbol"
                         />
                       )}
-                  </p>
+                    </div>
+
+                      
+                      <h4 className="price text-black font-bold text-gold">Rs {price}</h4>
+                    </header>
+                  <p className="item-text text-sm text-grey">{desc}</p>
+                    <Rating value={5} readonly/>
                   </div>
               </div>
               <div  className="flex justify-start">
