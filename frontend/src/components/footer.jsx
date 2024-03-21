@@ -20,7 +20,7 @@ const currentYear = new Date().getFullYear();
 export default function Footer() {
   return (
     <footer className="relative w-full">
-      <div className="mx-auto w-full max-w-7xl px-8">
+      <div className="mx-auto w-full max-w-7xl px-8 mt-5">
         <div className="grid grid-col-3 justify-between gap-4 md:grid-cols-2">
           <Typography variant="h5" className="mb-6">
             Material Tailwind
