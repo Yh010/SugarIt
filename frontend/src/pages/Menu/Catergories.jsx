@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 const Categories = ({ categories, filterItems }) => {
   return (
-    <div className="btn-container mb-16 flex justify-center">
+    <div className="btn-container mb-16 flex flex-wrap justify-center">
       {categories.map((category, index) => {
         return (
           <button
