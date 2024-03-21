@@ -8,6 +8,11 @@ export default withMT({
   ],
   theme: {
     extend: {
+      colors:{
+        'gold': '#c59d5f',
+        'white':'#ffffff',
+        'grey' : '#102a42',
+      },
       spacing: {
         '3px': '3px',
       },
@@ -24,6 +29,7 @@ export default withMT({
           '0%': { transform: 'translateX(100%)' },
           '100%': { transform: 'translateX(0%)' },
         },
+        
       } 
     },
   },

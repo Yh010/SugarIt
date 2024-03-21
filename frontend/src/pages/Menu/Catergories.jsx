@@ -6,7 +6,7 @@ const Categories = ({ categories, filterItems }) => {
         return (
           <button
             type="button"
-            className="filter-btn uppercase border-transparent font-medium mx-2 py-1 px-2 rounded transition duration-300 hover:bg-black hover:text-white"
+            className="filter-btn uppercase border-transparent font-medium mx-2 py-1 px-2 rounded transition duration-300 hover:bg-gold hover:text-white"
             key={index}
             onClick={() => filterItems(category)}
           >
