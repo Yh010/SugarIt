@@ -14,7 +14,7 @@ export default function AddtoCartButton({id,title,price}) {
 
     return (
         <div>
-            <Button className="mx-0.5 flex items-center gap-3 bg-gold" onClick={ 
+            <Button className="bg-gold hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" onClick={ 
                 addItemHandler
             }>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-1 h-1">
