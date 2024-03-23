@@ -4,10 +4,12 @@ export default function ScrollPics() {
     return (
         <div className="flex justify-center items-center h-screen">
             <Carousel
-                className="rounded-xl"
-                style={{ height: "400px", width: "600px" }}
+                style={{ height: "100%", width: "100%" }}
                 navigation={({ setActiveIndex, activeIndex, length }) => (
-                <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
+                <div 
+                    className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2 p-0" // Added p-0 here
+                    style={{ padding: 0 ,margin:0}} // Added inline style for zero padding
+                >
                 {new Array(length).fill("").map((_, i) => (
                     <span
                     key={i}
@@ -36,6 +38,10 @@ export default function ScrollPics() {
                     className="h-full w-full object-cover"
                 />
             </Carousel>      
+
+
       </div>
-  );
+
+      
+    );
 }

@@ -7,6 +7,9 @@ export default withMT({
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    // extend: { spacing: {
+    //   '3px': '3px',
+    // }},
     extend: {
       colors:{
         'gold': '#c59d5f',
