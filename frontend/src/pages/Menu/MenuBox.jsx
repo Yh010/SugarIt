@@ -1,21 +1,31 @@
 /* eslint-disable react/prop-types */
+
+import AddtoCartButton from "../../components/PaymentComponents/AddtoCartButton"
+// import ViewReviewsButton from "../../components/PaymentComponents/ViewReviewsButton"
+// import { Rating } from "@material-tailwind/react";
+
 // eslint-disable-next-line react/prop-types
 const MenuBox = ({items}) => {
   return (
-    <div className=" section-center w-full mx-auto max-w-screen-xl grid grid-cols-2 gap-y-8 gap-x-4 justify-items-center">
+    <div className=" section-center w-9/12 mx-auto max-w-screen-xl grid grid-cols-2 gap-y-8 gap-x-8 justify-items-center">
       {items.map((menuItem) => {
         const { id, title, img, price, desc } = menuItem
         return (
-          <article key={id} className="menu-item grid grid-cols-2 gap-y-4 gap-x-4 max-w-md">
-            <img src={img} alt={title} className="photo object-fit-cover w-full h-52 border-black border rounded-md block" />
-            <div className="item-info">
-              <header className="flex justify-between border-b-[1px] border-dotted border-black">
-                <h4 className="font-bold">{title}</h4>
-                <h4 className="price text-black font-bold">N{price}</h4>
-              </header>
-              <p className="item-text text-sm">{desc}</p>
-            </div>
-          </article>
+              <div key = {id} className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+                    <img className="w-full h-48 object-cover" src={img}alt="{title}" />
+                    <div className="flex flex-col justify-end">
+                      <div className="px-6 py-4">
+                        <div className="font-bold text-xl mb-2">{title}</div>
+                        <p className="text-gray-700 text-base">
+                          {desc}
+                        </p>
+                      </div>
+                      <div className="px-6 pt-4 pb-2 flex flex-row justify-between">
+                        <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Rs {price}</span>
+                        <AddtoCartButton id={id} price = {price} title={title} />
+                      </div>
+                    </div>
+              </div>
         )
       })}
     </div>

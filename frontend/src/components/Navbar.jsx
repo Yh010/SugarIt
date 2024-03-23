@@ -24,6 +24,16 @@ function NavList() {
           About Us
         </Link>
       </li>
+      <li className="font-medium">
+        <Link to="/forum" className="hover:text-blue-500 transition-colors text-blue-gray-900">
+          Forum
+        </Link>
+      </li>
+      <li className="font-medium">
+        <Link to="/checkout" className="hover:text-blue-500 transition-colors text-blue-gray-900">
+          Cart
+        </Link>
+      </li>
     </ul>
   );
 }
@@ -39,7 +49,9 @@ export function NavbarTop() {
         variant="h5"
         className="text-blue-gray-900 cursor-pointer" 
       >
-        SugarIt
+       <Link to="/">
+          SugarIt
+        </Link>
       </Typography>
       <div className="lg:flex justify-end">
         <NavList />

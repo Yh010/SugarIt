@@ -1,35 +1,39 @@
-
-import './App.css'
-import { ScrollPics} from './components/ScrollPics'
+import { BrowserRouter as Router,Routes,Route } from 'react-router-dom'
+import NavbarTop from './components/Navbar'
 import Footer from './components/footer'
-import {  NavbarTop } from './components/Navbar'
-import TodaysSpecial from './components/TodaySpecialComponents/TodaySpecial'
-import Offers from './components/Offers/Offers'
+import  Menu  from './pages/Menu/Menu'
+import AboutUs from './pages/AboutUs/AboutUs'
+import './App.css'
+import Books from './pages/Books/Books'
 import Event from './pages/Event'
 import Welcome1 from './components/Welcome1'
-
+import Forum from './pages/Forum/Forum'
+import PaymentCheckout from './pages/Payments/Checkout'
 
 
 function App() {
   return (
-    <div>
-      <div style={{padding:0,margin:0 , position:'relative'}}>
-         
-        <NavbarTop/>        
-        <Welcome1></Welcome1>
-        <ScrollPics/>
+    <>
+    <Router>
+      <header>
+        <NavbarTop />
+      </header>
+      <main>
+        <Routes>
+        <Route path='/' element = { <Welcome1/> }/>
+        <Route path='/menu' element = { <Menu/> }/>
+        <Route path='/AboutUs' element = { <AboutUs/> }/>
+        <Route path='/books' element = { <Books /> }/>
+        <Route path='/events' element = { <Event/> }/>
+        <Route path='/forum' element={<Forum />} />
+        <Route path='/checkout' element = { <PaymentCheckout/>}/>
         
-        {/* <Welcome/> */}
-        {/* <NavbarTop/> */}
-       
-       </div>
-        <div className='flex justify-evenly mt-4'>
-            <Offers/>
-          <TodaysSpecial/>
-        </div>
-        
-     <Footer/>
-    </div>
+        </Routes>
+      </main>
+      <Footer />
+    </Router>
+    </>
+    
   )
 }
 
