@@ -1,7 +1,7 @@
 import { Carousel } from "@material-tailwind/react";
  
 export function ScrollPics() {
-    return (
+    return (<>
         <div className="flex justify-center items-center h-screen">
             <Carousel
                 style={{ height: "100%", width: "100%" }}
@@ -38,6 +38,10 @@ export function ScrollPics() {
                     className="h-full w-full object-cover"
                 />
             </Carousel>      
+
+
       </div>
-  );
+
+      
+      </>);
 }

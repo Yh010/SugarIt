@@ -6,6 +6,8 @@ import {  NavbarTop } from './components/Navbar'
 import TodaysSpecial from './components/TodaySpecialComponents/TodaySpecial'
 import Offers from './components/Offers/Offers'
 import Event from './pages/Event'
+import Welcome1 from './components/Welcome1'
+
 
 
 function App() {
@@ -13,9 +15,13 @@ function App() {
     <div>
       <div style={{padding:0,margin:0 , position:'relative'}}>
          
-        {/* <NavbarTop/> */}
+        <NavbarTop/>        
+        <Welcome1></Welcome1>
         <ScrollPics/>
-        <NavbarTop/>
+        
+        {/* <Welcome/> */}
+        {/* <NavbarTop/> */}
+       
        </div>
         <div className='flex justify-evenly mt-4'>
             <Offers/>
