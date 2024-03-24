@@ -1,6 +1,7 @@
 import ScrollPics from './Scrollpics/ScrollPics'
 import Offers from './Offers/Offers'
 import TodaySpecial from './TodaySpecialComponents/TodaySpecial'
+import WelcomeDiv from './WelcomeDiv/WelcomeDiv'
 
 export default function Welcome1() {
   return (
@@ -8,7 +9,8 @@ export default function Welcome1() {
   <p className='welcome' style={{textAlign:'center',fontSize:'60px',color:'white',fontStyle:'italic'}}>
     Welcome to SugarIt
   </p>
-  <ScrollPics />
+      <ScrollPics />
+      <WelcomeDiv/>
   <div className="flex justify-evenly mt-4">
             <Offers />
             <TodaySpecial/>
