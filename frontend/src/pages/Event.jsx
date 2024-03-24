@@ -2,6 +2,8 @@ import React, { useRef, useEffect } from 'react';
 import Event1 from '../assets/Events1.jpg'
 import Corporate from '../assets/Corporate.jpg'
 import Parties from '../assets/Parties.jpg'
+import EventsPlanning from '../assets/EventsPlanning.png'
+import ChatterBox from "../assets/ChatterBox.png"
 const WelcomeSection = () => (
     <div className="text-center py-10">
         <h2 className="text-4xl font-bold">Welcome to SugarIt</h2>
@@ -72,7 +74,43 @@ const typesofcards = () => {
                     </div></div>
             </div>
 
-            <div style={{ height: '40px' }}></div>
+            <div className='h-full w-full flex justify-center col-3'>
+                <div>
+                    <img className="w-full h-full" src={ EventsPlanning} />
+                </div>
+                <div className='text-center'>
+                    <p className="font-sans italic font-bold">
+                        "Join us as our guests"
+                    Where the opportunities are boundless
+                    </p>
+                    
+                    <p className="font-sans italic font-medium">
+                        Celebrate your special occasions with us
+                    And craft unforgettable memories.
+                    </p>
+
+                    
+                    <p className="font-sans italic">
+                        *Looking for a spot to chill?
+                    *Immerse yourself in the POEMS ambiance?
+                    *Browse our menu for a tantalizing culinary experience.
+                    </p>
+
+                    
+                    <p className="font-sans italic">
+                        We also host unique EVENTS! Our dedicated
+                    chefs source the freshest ingredients
+                    to craft delectable dishes or snacks
+                    that offer explosive flavors to elevate
+                    any gathering.
+                    </p>
+                </div>
+                <div>
+                     <img className="w-full h-full" src={ ChatterBox} />
+                </div>
+
+
+            </div>
         </div>       
     );
 };
