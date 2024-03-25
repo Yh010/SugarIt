@@ -17,14 +17,33 @@
 .welcome{
   position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
-    margin-top: 240px;
+    /* left: 0.5; */
+    /* right: 0.5; */
+    /* width: 100%; */
+    margin-top: 260px;
+    margin-left: 12%;
+    /* margin-right: 0.5; */
     z-index: 10; /* Ensure the navbar is above the carousel */
     opacity: 1;
     color: black;
-    justify-content: center;
-    width: 0.4;
+    /* justify-content: center; */
+    width: 80%;
+    /* max-width: 0.3; */
+    /* align-items: center; */
+    /* display: flex; */
 
 } 
+.parent-div {
+  position: relative; /* This is the container for your components */
+}
+.special-offer-div {
+  position: absolute;
+  top: calc(50% - 192px); /* Adjust this value based on the actual height of the div */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10; /* Ensure it sits above the other components */
+  margin-top: 0px;
+}
+
+
 

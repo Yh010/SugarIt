@@ -20,7 +20,7 @@ export default function Offers() {
     const handleIsFavorite = () => setIsFavorite((cur) => !cur);
 
     return (
-        <div className="flex justify-end">
+        <div className="flex justify-end offers">
             <Button
         className="h-50 w-30
          cursor-pointer overflow-hidden transition-opacity hover:opacity-90"

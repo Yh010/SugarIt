@@ -2,8 +2,8 @@ import React, { useRef, useEffect } from 'react';
 
 const WelcomeSection = () => (
     <div className="text-center py-10">
-        <h2 className="text-4xl font-bold">Welcome to SugarIt</h2>
-        <p className="text-xl mt-4">A premier restaurant in Rourkela , Odisha.</p>
+        {/* <h2 className="text-4xl font-bold">Welcome to SugarIt</h2>
+        <p className="text-xl mt-4">A premier restaurant in Rourkela , Odisha.</p> */}
     </div>
 );
 
@@ -116,7 +116,7 @@ const typesofcards = () => {
 
 const Event = () => (
     <div>
-        <WelcomeSection />        
+        {/* <WelcomeSection />         */}
         <CategoriesSection />
         {<div style={{ height: '100px' }}></div>}
         {typesofcards()}
