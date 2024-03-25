@@ -74,7 +74,7 @@ const typesofcards = () => {
                     </div></div>
             </div>
 
-            <div className='h-full w-full flex justify-center col-3'>
+            <div className='h-full w-full flex justify-center '>
                 <div>
                     <img className="w-full h-full" src={ EventsPlanning} />
                 </div>
