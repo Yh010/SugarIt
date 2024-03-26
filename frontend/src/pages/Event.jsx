@@ -1,5 +1,9 @@
 import React, { useRef, useEffect } from 'react';
-
+import Event1 from '../assets/Events1.jpg'
+import Corporate from '../assets/Corporate.jpg'
+import Parties from '../assets/Parties.jpg'
+import EventsPlanning from '../assets/EventsPlanning.png'
+import ChatterBox from "../assets/ChatterBox.png"
 const WelcomeSection = () => (
     <div className="text-center py-10">
         <h2 className="text-4xl font-bold">Welcome to SugarIt</h2>
@@ -42,31 +46,9 @@ const CategoriesSection = () => {
     }, []);
 
     return (
-        <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel" style={{ overflowX: 'hidden' }}>
-            <ol className="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div className="flexcarousel-inner">
-                <div className="carousel-item active">
-                    <img style={{ height: '600px', width: '350px' }} className="d-block w-100" src="https://media.istockphoto.com/id/868408746/photo/assorted-indian-dish.jpg?s=612x612&w=0&k=20&c=XLsAk571Z2kEe_x6TnXWSzsG95-2agp-TcYswQrKHuo=" alt="First slide" />
-                </div>
-                <div className="carousel-item">
-                    <img style={{ height: '600px', width: '350px' }} className="d-block w-100" src="https://media.istockphoto.com/id/868408746/photo/assorted-indian-dish.jpg?s=612x612&w=0&k=20&c=XLsAk571Z2kEe_x6TnXWSzsG95-2agp-TcYswQrKHuo=" alt="Second slide" />
-                </div>
-                <div className="carousel-item">
-                    <img style={{ height: '600px', width: '350px' }} className="d-block w-100" src="https://media.istockphoto.com/id/868408746/photo/assorted-indian-dish.jpg?s=612x612&w=0&k=20&c=XLsAk571Z2kEe_x6TnXWSzsG95-2agp-TcYswQrKHuo=" alt="Third slide" />
-                </div>
-            </div>
-            <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span className="sr-only">Previous</span>
-            </a>
-            <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                <span className="sr-only">Next</span>
-            </a>
+
+        <div className="carousel-item active">
+                    <img style={{ height: '600px', width: '350px' }} className="d-block w-100" src={Event1} alt="First slide" />
         </div>
     );
 };
@@ -79,7 +61,7 @@ const typesofcards = () => {
                 <div style={{ marginLeft: '2%' }}></div>
                 <div style={{ display: 'flex' }}>
                     <div style={{display:'flex', gap:'3%'}}>
-                        <CategoryCard title="Corporate" imageUrl="https://media.istockphoto.com/id/868408746/photo/assorted-indian-dish.jpg?s=612x612&w=0&k=20&c=XLsAk571Z2kEe_x6TnXWSzsG95-2agp-TcYswQrKHuo=" />
+                        <CategoryCard title="Corporate" imageUrl={Corporate} class/>
                         <div style={{ width: '43%' }}> <p className='italic ' style={{textAlign:'justify'}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p> </div>
                     </div></div>
             </div>
@@ -88,27 +70,47 @@ const typesofcards = () => {
                 <div style={{ marginLeft: '5%' }}></div>
                 <div style={{ display: 'flex', gap: '3%' }}>
                     <div style={{ width: '46%' }}> <p className='italic' style={{textAlign:'justify'}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p> </div><div>
-                        <CategoryCard title="Parties" imageUrl="https://media.istockphoto.com/id/868408746/photo/assorted-indian-dish.jpg?s=612x612&w=0&k=20&c=XLsAk571Z2kEe_x6TnXWSzsG95-2agp-TcYswQrKHuo=" />
+                        <CategoryCard title="Parties" imageUrl={Parties} />
                     </div></div>
             </div>
 
-            <div style={{ display: 'flex', justifyContent: "center" }} className='flex space-x-20'>
-                <div style={{ marginLeft: '2%' }}></div>
-                <div style={{ display: 'flex' }}>
-                    <div style={{display:'flex', gap:'3%'}}>
-                        <CategoryCard title="Wedding" imageUrl="https://media.istockphoto.com/id/868408746/photo/assorted-indian-dish.jpg?s=612x612&w=0&k=20&c=XLsAk571Z2kEe_x6TnXWSzsG95-2agp-TcYswQrKHuo=" />
-                        <div style={{ width: '43%' }}> <p className='italic' style={{textAlign:'justify'}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p> </div>
-                    </div></div>
-            </div>
+            <div className='h-full w-full flex justify-center '>
+                <div>
+                    <img className="w-full h-full" src={ EventsPlanning} />
+                </div>
+                <div className='text-center'>
+                    <p className="font-sans italic font-bold">
+                        "Join us as our guests"
+                    Where the opportunities are boundless
+                    </p>
+                    
+                    <p className="font-sans italic font-medium">
+                        Celebrate your special occasions with us
+                    And craft unforgettable memories.
+                    </p>
 
-            <div style={{ display: 'flex', justifyContent: "center" }} className='flex space-x-10 pr-20'>
-                <div style={{ marginLeft: '5%' }}></div>
-                <div style={{ display: 'flex', gap: '3%' }}>
-                    <div style={{ width: '46%' }}> <p className='italic' style={{textAlign:'justify'}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p> </div><div>
-                        <CategoryCard title="Event Planning" imageUrl="https://media.istockphoto.com/id/868408746/photo/assorted-indian-dish.jpg?s=612x612&w=0&k=20&c=XLsAk571Z2kEe_x6TnXWSzsG95-2agp-TcYswQrKHuo=" />
-                    </div></div>
+                    
+                    <p className="font-sans italic">
+                        *Looking for a spot to chill?
+                    *Immerse yourself in the POEMS ambiance?
+                    *Browse our menu for a tantalizing culinary experience.
+                    </p>
+
+                    
+                    <p className="font-sans italic">
+                        We also host unique EVENTS! Our dedicated
+                    chefs source the freshest ingredients
+                    to craft delectable dishes or snacks
+                    that offer explosive flavors to elevate
+                    any gathering.
+                    </p>
+                </div>
+                <div>
+                     <img className="w-full h-full" src={ ChatterBox} />
+                </div>
+
+
             </div>
-            <div style={{ height: '40px' }}></div>
         </div>       
     );
 };
