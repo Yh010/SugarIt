@@ -51,22 +51,29 @@ const CategoriesSection = () => {
 const typesofcards = () => {
     return (
         <div className=" flex flex-col space-y-20">          
-            <div style={{ display: 'flex', justifyContent: "center" }} className='flex space-x-20'>
-                <div style={{ marginLeft: '2%' }}></div>
-                <div style={{ display: 'flex' }}>
-                    <div style={{display:'flex', gap:'3%'}}>
-                        <CategoryCard title="Corporate" imageUrl={Corporate} class/>
-                        <div style={{ width: '80%' }}> <p className='italic px-10' style={{textAlign:'justify'}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p> </div>
-                    </div></div>
-            </div>
+            <div>
+                <div style={{ display: 'flex', justifyContent: "center" }} className='flex space-x-20'>
+                    <div style={{ marginLeft: '2%' }}>
 
-            <div style={{ display: 'flex', justifyContent: "center" }} className='flex space-x-10 pr-20'>
-                <div style={{ marginLeft: '5%' }}></div>
-                <div style={{ display: 'flex', gap: '3%' }}>
-                    <div style={{ width: '46%' }}> <p className='italic' style={{textAlign:'justify'}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p> </div><div>
-                        <CategoryCard title="Parties" imageUrl={Parties} />
-                    </div></div>
+                    </div>
+                    <div style={{ display: 'flex' }}>
+                        <div style={{display:'flex', gap:'3%'}}>
+                            <CategoryCard title="Corporate" imageUrl={Corporate} class/>
+                            <div style={{ width: '80%' }}> <p className='italic px-10' style={{textAlign:'justify'}}>Host your next corporate event at Sugar It and treat your team to a delightful experience. Whether it's a meeting, presentation, or team-building session, our cozy ambiance and delicious menu will make it a memorable occasion. Contact us to discuss custom packages tailored to your needs.</p> </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style={{ display: 'flex', justifyContent: "center" }} className='flex space-x-10 pr-20'>
+                    <div style={{ marginLeft: '5%' }}></div>
+                    <div style={{ display: 'flex', gap: '3%' }}>
+                        <div style={{ width: '46%' }}> <p className='italic' style={{textAlign:'justify'}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p> </div><div>
+                            <CategoryCard title="Parties" imageUrl={Parties} />
+                        </div>
+                    </div>
+                </div>
             </div>
+            
 
             <div className='h-full w-full flex justify-center '>
                 <div>
