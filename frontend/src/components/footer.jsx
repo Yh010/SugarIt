@@ -13,8 +13,8 @@ export default function Footer() {
   return (
     <footer className="relative w-full">
       <div className="mx-auto w-full max-w-7xl px-8 mt-5 ">
-        <div className="flex flex-row space-around">
-        <div className="mx-px">
+        <div className="flex flex-row">
+        <div className="mx-auto">
           <Typography variant="h5" className="mb-4">
             Sugar it : In a Box
           </Typography>
@@ -48,7 +48,7 @@ export default function Footer() {
           <MapContainer
             center={[22.266157284945393, 84.89405549796435]}
             zoom={13}
-            scrollWheelZoom={false}
+            scrollWheelZoom={true}
             className="h-60 w-full"
           >
             <TileLayer
