@@ -1,7 +1,11 @@
-import { Navbar, Typography } from "@material-tailwind/react";
+import { Badge, Button,Navbar, Typography } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
+import { useSelector } from 'react-redux';
 
 function NavList() {
+  const cartItems = useSelector(state => state.cartItems);
+  const size = cartItems.length;
+  console.log(size);
   return (
     <ul className="flex flex-row gap-4 lg:gap-6" >
       <li className="font-medium">
@@ -30,9 +34,12 @@ function NavList() {
         </Link>
       </li>
       <li className="font-medium">
-        <Link to="/checkout" className="hover:text-blue-500 transition-colors text-blue-gray-900">
-          Cart
-        </Link>
+        <Badge content={size} withBorder>
+          <Link to="/checkout" className="hover:text-blue-500 transition-colors text-blue-gray-900">
+             <Button >Cart</Button>
+          </Link>
+        </Badge>
+        
       </li>
     </ul>
   );
