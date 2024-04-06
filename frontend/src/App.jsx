@@ -9,6 +9,7 @@ import Event from './pages/Event'
 import Welcome1 from './components/Welcome1'
 import Forum from './pages/Forum/Forum'
 import PaymentCheckout from './pages/Payments/Checkout'
+/* import TeamDiv from './pages/Team' */
 
 
 function App() {
@@ -26,7 +27,9 @@ function App() {
         <Route path='/books' element = { <Books /> }/>
         <Route path='/events' element = { <Event/> }/>
         <Route path='/forum' element={<Forum />} />
-        <Route path='/checkout' element = { <PaymentCheckout/>}/>
+            <Route path='/checkout' element={<PaymentCheckout />} />
+            {/* <Route path='/team' element={<TeamDiv />} /> */}
+          
         
         </Routes>
       </main>
