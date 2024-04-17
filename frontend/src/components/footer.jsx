@@ -14,7 +14,7 @@ const LINKS = [
     items: ["Blog", "Newsletter", "Events", "Help center"],
   },
 ];
- 
+import { Link } from "react-router-dom";
 const currentYear = new Date().getFullYear();
  
 export default function Footer() {
@@ -77,8 +77,10 @@ export default function Footer() {
                 />
               </svg>
             </Typography>
-            <Typography as="a" href="https://www.instagram.com/sugar_rkl/?hl=en" className="opacity-80 transition-opacity hover:opacity-100">
-              Designed by Team Limbu Mirchi Productions
+            <Typography as="a" className="opacity-80 transition-opacity hover:opacity-100">
+              <Link to="/team">
+                Designed by Team Limbu Mirchi Productions
+              </Link>
             </Typography>
             
           </div>
