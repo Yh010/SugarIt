@@ -3,12 +3,6 @@ import eventIntro from '../videos/cropped_one.mp4';
 // import  { useRef } from 'react';
 
 
-const WelcomeSection = () => (
-    <div className="text-center py-10">
-        <h2 className="text-4xl font-bold">Welcome to SugarIt</h2>
-        <p className="text-xl mt-4">A premier restaurant in Rourkela , Odisha.</p>
-    </div>
-);
 
 // const Category = ({ title, imageUrl }) => (
 //     <div className="overflow-hidden">
@@ -46,31 +40,9 @@ const CategoriesSection = () => {
     }, []);
 
     return (
-        <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel" style={{ overflowX: 'hidden' }}>
-            <ol className="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div className="flexcarousel-inner">
-                <div className="carousel-item active">
-                    <img style={{ height: '600px', width: '350px' }} className="d-block w-100" src="https://media.istockphoto.com/id/868408746/photo/assorted-indian-dish.jpg?s=612x612&w=0&k=20&c=XLsAk571Z2kEe_x6TnXWSzsG95-2agp-TcYswQrKHuo=" alt="First slide" />
-                </div>
-                <div className="carousel-item">
-                    <img style={{ height: '600px', width: '350px' }} className="d-block w-100" src="https://media.istockphoto.com/id/868408746/photo/assorted-indian-dish.jpg?s=612x612&w=0&k=20&c=XLsAk571Z2kEe_x6TnXWSzsG95-2agp-TcYswQrKHuo=" alt="Second slide" />
-                </div>
-                <div className="carousel-item">
-                    <img style={{ height: '600px', width: '350px' }} className="d-block w-100" src="https://media.istockphoto.com/id/868408746/photo/assorted-indian-dish.jpg?s=612x612&w=0&k=20&c=XLsAk571Z2kEe_x6TnXWSzsG95-2agp-TcYswQrKHuo=" alt="Third slide" />
-                </div>
-            </div>
-            <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span className="sr-only">Previous</span>
-            </a>
-            <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                <span className="sr-only">Next</span>
-            </a>
+
+        <div className="carousel-item active">
+                    <img style={{ height: '500px', width: '350px' }} className="d-block w-100 px-32" src={Event1} alt="First slide" />
         </div>
     );
 };
