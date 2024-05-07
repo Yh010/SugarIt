@@ -27,4 +27,23 @@
     width: 0.4;
 
 } 
+.banner {
+  display: flex;
+  overflow-x: hidden;
+  white-space: nowrap;
+}
+
+.image {
+  flex: 0 0 auto;
+  animation: scroll-horizontal var(--speed) linear infinite;
+}
+
+@keyframes scroll-horizontal {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 

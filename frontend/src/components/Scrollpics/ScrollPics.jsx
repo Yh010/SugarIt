@@ -1,62 +1,69 @@
-import { Carousel } from "@material-tailwind/react";
-import Aesthetic from "../../assets/Aesthetic.png"
-import Bike from "../../assets/Bike.png"
-import Dolls from "../../assets/Dollls.png"
-import SugarIt from "../../assets/SugarIt.png"
-import Food from "../../assets/Food.png"
- 
+import { useEffect, useRef } from 'react';
+import Aesthetic from '../../assets/Aesthetic.png';
+import Bike from '../../assets/Bike.png';
+// import Dolls from '../../assets/Dolls.png'; // This is commented out and should not affect the movement.
+import SugarIt from '../../assets/SugarIt.png';
+import Food from '../../assets/Food.png';
+
 export default function ScrollPics() {
-    return (
-        <div className="flex justify-center items-center h-screen">
-            <Carousel
-                style={{ height: "100%", width: "100%" }}
-                navigation={({ setActiveIndex, activeIndex, length }) => (
-                <div 
-                    className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2 p-0" // Added p-0 here
-                    style={{ padding: 0 ,margin:0}} // Added inline style for zero padding
-                >
-                {new Array(length).fill("").map((_, i) => (
-                    <span
-                    key={i}
-                    className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${
-                        activeIndex === i ? "w-8 bg-white" : "w-4 bg-white/50"
-                    }`}
-                    onClick={() => setActiveIndex(i)}
-                    />
-                ))}
-                </div>
-            )}
-            >
-                <img
-                    src={SugarIt}
-                    alt="image 1"
-                    className="h-full w-full object-cover"
-                />
-                <img
-                    src={Food}
-                    alt="image 2"
-                    className="h-full w-full object-cover"
-                />
-                <img
-                    src={Bike}
-                    alt="image 3"
-                    className="h-full w-full object-cover"
-                />
-                <img
-                    src={Dolls}
-                    alt="image 3"
-                    className="h-full w-full object-cover"
-                />
-                <img
-                    src={Aesthetic}
-                    alt="image 3"
-                    className="h-full w-full object-cover"
-                />
-            </Carousel>      
+  const carouselRef = useRef(null);
+  const images = [SugarIt, Food, Bike, Aesthetic];
 
+  useEffect(() => {
+    const scrollElement = carouselRef.current;
+    // Make sure the ref is being applied and the element exists
+    if (!scrollElement) {
+      return;
+    }
 
+    let autoScrollAnimation;
+
+    // Function to animate the scroll
+    const startAutoScroll = () => {
+      if (scrollElement.scrollWidth > scrollElement.clientWidth) {
+        // Only scroll if the content is wider than the container
+        autoScrollAnimation = requestAnimationFrame(startAutoScroll);
+        scrollElement.scrollLeft += 1; // Increment the scroll position
+      }
+    };
+
+    // Start auto-scrolling
+    startAutoScroll();
+
+    // Clean up animation frame
+    return () => {
+      if (autoScrollAnimation) {
+        cancelAnimationFrame(autoScrollAnimation);
+      }
+    };
+  }, []);
+
+  return (
+    <div className="flex justify-center items-center">
+      <div
+        ref={carouselRef}
+        className="flex overflow-x-auto scroll-smooth hide-scrollbar"
+        style={{ whiteSpace: 'nowrap' }}
+      >
+        {images.map((src, i) => (
+          <img
+            key={i}
+            src={src}
+            alt={`Image ${i}`}
+            className="inline-block h-auto max-w-md mr-2"
+          />
+        ))}
       </div>
 
-      
-    );
+      <style jsx global>{`
+        .hide-scrollbar::-webkit-scrollbar {
+          display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+        }
+        .hide-scrollbar {
+          -ms-overflow-style: none; /* IE and Edge */
+          scrollbar-width: none; /* Firefox */
+        }
+      `}</style>
+    </div>
+  );
 }
