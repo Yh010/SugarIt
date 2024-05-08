@@ -79,6 +79,7 @@ navigate('/menu')
       <div style={{ height: '25px' }}></div>
       {/* <Banner images={images} speed={20000} /> */}
       <ScrollPics />
+      <div style={{ height: '25px' }}></div>
     </div>
   );
 };
