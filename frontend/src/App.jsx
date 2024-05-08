@@ -12,7 +12,7 @@ import PaymentCheckout from './pages/Payments/Checkout'
 
 import Newhomepage from './pages/Newhomepage'
 
-/* import TeamDiv from './pages/Team' */
+ import TeamDiv from './pages/Team' 
 
 
 
@@ -33,7 +33,7 @@ function App() {
         <Route path='/events' element = { <Event/> }/>
         <Route path='/forum' element={<Forum />} />
             <Route path='/checkout' element={<PaymentCheckout />} />
-            {/* <Route path='/team' element={<TeamDiv />} /> */}
+            <Route path='/team' element={<TeamDiv />} />
           
         
         </Routes>

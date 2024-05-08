@@ -1,32 +1,32 @@
-.navbar-top { /* You might need to adjust the class name to match your setup */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    margin-top: 10px;
-    z-index: 10;  
-    /* Ensure the navbar is above the carousel  */
-    opacity: 0.8;
-  }
+.result-data {
+  display: flex;
+  align-items: flex-start; /* Changed from start to flex-start for better support */
+  gap: 20px;
+}
 
-
-  .navbar-top > nav {
-    background: white; /* Or any color you want */
-  }
-
-.welcome{
+.navbar-top { /* Adjusted for clarity and efficiency */
   position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    margin-top: 240px;
-    z-index: 10; /* Ensure the navbar is above the carousel */
-    opacity: 1;
-    color: black;
-    justify-content: center;
-    width: 0.4;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin-top: 10px;
+  z-index: 10;  
+  opacity: 0.8; /* Ensure the navbar is above the carousel */
+  background: white; /* Set background color here for clarity */
+}
 
-} 
+.welcome {
+  position: absolute;
+  top: 240px; /* Adjusted for direct styling without need for margin-top */
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  opacity: 1;
+  color: black;
+  display: flex; /* Ensure this is flex to apply justify-content */
+  justify-content: center; /* Centers the welcome message horizontally */
+}
+
 .banner {
   display: flex;
   overflow-x: hidden;
@@ -47,54 +47,50 @@
   }
 }
 
-.result{
-  padding:0px 5%;
+.result {
+  padding: 0px 5%;
   max-height: 70vh;
   overflow-y: scroll;
 }
 
-.result::-webkit-scrollbar{
-  display: none;
+.result::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for cleaner design */
 }
 
-.result-title{
+.result-title {
   margin: 40px 0px;
   display: flex;
   align-items: center;
   gap: 20px;
 }
 
-.result-data{
-  display: flex;
-  align-items: start;
-  gap: 20px;
-}
-.loader{
+.loader {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.loader hr{
+
+.loader hr {
   border-radius: 4px;
   border: none;
   background-color: #f6f7f8;
-  background: linear-gradient(to right, #9ed7ff,#ffffff,#9ed7ff);
+  background: linear-gradient(to right, #9ed7ff, #ffffff, #9ed7ff);
   background-size: 800px 50px;
   height: 20px;
   animation: loader 3s infinite linear;
 }
 
 @keyframes loader {
-  0%{
-    background-position: -800px 0px;
+  0% {
+    background-position: -800px 0;
   }
-  100%{
-    background-position: 800px 0px;
+  100% {
+    background-position: 800px 0;
   }
 }
 
-.result-data p{
+.result-data p {
   font-size: 17px;
   font-weight: 300;
   line-height: 1.8;
