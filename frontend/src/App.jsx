@@ -9,7 +9,11 @@ import Event from './pages/Event'
 import Welcome1 from './components/Welcome1'
 import Forum from './pages/Forum/Forum'
 import PaymentCheckout from './pages/Payments/Checkout'
+
+import Newhomepage from './pages/Newhomepage'
+
 /* import TeamDiv from './pages/Team' */
+
 
 
 function App() {
@@ -21,7 +25,8 @@ function App() {
       </header>
       <main>
         <Routes>
-        <Route path='/' element = { <Welcome1/> }/>
+        {/* <Route path='/' element = { <Welcome1/> }/> */}
+        <Route path='/' element={<Newhomepage></Newhomepage>} />
         <Route path='/menu' element = { <Menu/> }/>
         <Route path='/AboutUs' element = { <AboutUs/> }/>
         <Route path='/books' element = { <Books /> }/>
