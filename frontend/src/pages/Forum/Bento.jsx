@@ -5,16 +5,16 @@ const posts = [
   {
     id: 1,
     title: 'Amazing Pav Bhaji',
-    href: '#',
+
     description:
       'Your pav bhaji from Sugar Cafe is an absolute delight! The rich blend of flavors, the perfect balance of spices, and the hearty texture make it a culinary masterpiece. Each bite is a journey through a symphony of tastes that leaves me craving for more. It is evident that it is crafted with passion and expertise. Kudos to Sugar Cafe for serving such an outstanding dish!',
     date: 'Mar 16, 2020',
     datetime: '2020-03-16',
-    category: { title: 'Marketing', href: '#' },
+    category: { title: 'Customer review'},
     author: {
       name: 'Michael Foster',
-      role: 'Co-Founder / CTO',
-      href: '#',
+      role: 'Customer',
+  
       imageUrl:
         'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
     },
@@ -22,16 +22,16 @@ const posts = [
     {
     id: 2,
     title: 'Masala Dosa',
-    href: '#',
+
     description:
       'Sugar Cafe masala dosa is a true marvel! The crispy exterior perfectly complements the flavorful potato filling inside. It is a delightful experience of South Indian cuisine that never fails to impress.',
     date: 'Mar 16, 2020',
     datetime: '2020-03-16',
-    category: { title: 'Marketing', href: '#' },
+    category: { title: 'Customer review'},
     author: {
       name: 'Michael Foster',
-      role: 'Co-Founder / CTO',
-      href: '#',
+      role: 'Customer',
+  
       imageUrl:
         'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
     },
@@ -39,16 +39,16 @@ const posts = [
     {
     id: 3,
     title: 'Paneer Tikka',
-    href: '#',
+
     description:
       'The paneer tikka at Sugar Cafe is simply divine! Each tender piece of paneer is marinated to perfection, bursting with aromatic spices and grilled to just the right level of char. It is a tantalizing dish that always leaves me wanting more.',
     date: 'Mar 16, 2020',
     datetime: '2020-03-16',
-    category: { title: 'Marketing', href: '#' },
+    category: { title: 'Customer review'},
     author: {
       name: 'Michael Foster',
-      role: 'Co-Founder / CTO',
-      href: '#',
+      role: 'Customer',
+  
       imageUrl:
         'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
     },
@@ -56,16 +56,16 @@ const posts = [
     {
     id: 4,
     title: 'Vegetable Biryani',
-    href: '#',
+
     description:
       'Sugar Cafe vegetable biryani is a celebration of flavors! The fragrant basmati rice cooked with an assortment of vegetables and aromatic spices creates a harmonious blend that transports the taste buds to culinary paradise. It is a dish that never fails to satisfy.',
     date: 'Mar 16, 2020',
     datetime: '2020-03-16',
-    category: { title: 'Marketing', href: '#' },
+    category: { title: 'Customer review'},
     author: {
       name: 'Michael Foster',
-      role: 'Co-Founder / CTO',
-      href: '#',
+      role: 'Customer',
+  
       imageUrl:
         'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
     },
@@ -73,16 +73,16 @@ const posts = [
     {
     id: 5,
     title: 'Chicken Tikka Masala:',
-    href: '#',
+
     description:
       'Sugar Cafe chicken tikka masala is a culinary masterpiece! The tender chicken pieces cooked in a creamy tomato-based sauce, infused with aromatic spices, create a dish that is simply irresistible. It is comfort food at its finest.',
     date: 'Mar 16, 2020',
     datetime: '2020-03-16',
-    category: { title: 'Marketing', href: '#' },
+    category: { title: 'Customer review'},
     author: {
       name: 'Michael Foster',
-      role: 'Co-Founder / CTO',
-      href: '#',
+      role: 'Customer',
+  
       imageUrl:
         'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
     },
@@ -90,16 +90,16 @@ const posts = [
     {
     id: 6,
     title: 'Chole Bhature',
-    href: '#',
+
     description:
       'Indulging in Sugar Cafe chole bhature is always a treat! The fluffy bhature paired with the hearty and flavorful chole is a match made in heaven. Each bite is a burst of authenticity and deliciousness that keeps me coming back for more.',
     date: 'Mar 16, 2020',
     datetime: '2020-03-16',
-    category: { title: 'Marketing', href: '#' },
+    category: { title: 'Customer review'},
     author: {
       name: 'Michael Foster',
-      role: 'Co-Founder / CTO',
-      href: '#',
+      role: 'Customer',
+  
       imageUrl:
         'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
     },
