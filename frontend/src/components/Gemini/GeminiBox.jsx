@@ -26,7 +26,7 @@ export default function GeminiBox() {
     const [showResult, setshowResult] = useState(false);
     const [loading, setloading] = useState(false);
     const [resultData, setresultData] = useState("");
-
+  
     const delayPara = (index,nextWord) => {
         setTimeout(function () {
             setresultData(prev => prev + nextWord);
@@ -63,7 +63,7 @@ export default function GeminiBox() {
   return (
     <div className="flex justify-end">
       <Card
-        className="h-50 w-50 cursor-pointer overflow-hidden transition-opacity hover:opacity-70"
+        className="h-50 w-40 cursor-pointer overflow-hidden transition-opacity hover:opacity-70"
         onClick={handleOpen}
       >
         <img
