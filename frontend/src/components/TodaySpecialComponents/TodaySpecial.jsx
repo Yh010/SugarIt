@@ -11,6 +11,7 @@ import {
 } from "@material-tailwind/react";
 import { useState } from "react";
 import { TodaySpecialCarousel } from "./TodaySpecialCarousel";
+import noodles_image from '../TodaySpecialComponents/noodles_image.jpg'
 export default function TodaysSpecial() {
   const [open, setOpen] = useState(false);
   const [isFavorite, setIsFavorite] = useState(false);
@@ -21,14 +22,18 @@ export default function TodaysSpecial() {
   return (
     <div className="flex justify-end">
       <Card
-        className="h-50 w-50 cursor-pointer overflow-hidden transition-opacity hover:opacity-70"
-        onClick={handleOpen}
+        className="h-15 w-40 cursor-pointer overflow-hidden transition-opacity hover:opacity-70"
+        onClick={handleOpen} style={{textAlign:'center' , justifyContent:'center', padding:'4px'}} 
       >
-        <img
+        {/* <img
           alt="nature"
           className="h-full w-full object-cover object-center"
           src="https://t4.ftcdn.net/jpg/03/13/59/89/360_F_313598999_NCwASLAcQW4xvRkZjFti5b8ejh94GD7T.jpg"
-        />
+        /> */}
+       <div style={{display:'flex' ,textAlign:'center' , justifyContent:'center'}}>
+       <span><em>Todays Special</em></span>
+       <img style={{width:'100px',height:'auto'}} src={noodles_image}></img> 
+       </div>
       </Card>
       <Dialog size="xl" open={open} handler={handleOpen}>
         <DialogHeader className="justify-between">

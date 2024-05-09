@@ -10,6 +10,10 @@ import Boba from '../assets/Boba.jpeg';
 // import Dolls from '../assets/Dolls.png';
 import Bd from '../assets/boba_doughnut.png'
 import { useNavigate } from 'react-router-dom';
+import TodaysSpecial from '../components/TodaySpecialComponents/TodaySpecial';
+import GeminiBox from '../components/Gemini/GeminiBox';
+
+
 
 const TypesOfCards = () => {
   const videoRef = useRef(null);
@@ -40,7 +44,7 @@ const TypesOfCards = () => {
         autoPlay
         muted
         ref={videoRef}
-        style={{ pointerEvents: 'none' }}
+        style={{ pointerEvents: 'none' ,marginTop: '0px'}}
       >
         <source src={eventIntro} type="video/mp4" />
         Your browser does not support the video tag.
@@ -68,9 +72,21 @@ navigate('/menu')
 
 
 
-  return (
+  return (<>
     <div>
+    {/* <div style={{ position: 'sticky', top: '100px', zIndex: '999' }}>
+        <TodaysSpecial /> 
+      </div> */}
+      <div style={{position : 'relative'}}>
       <TypesOfCards />
+      <div style={{ position: 'absolute',top:'100px', justifyContent:'end', textAlign:'end' }}>
+        <TodaysSpecial/> 
+      </div>
+      <div style={{position:'absolute',top:'200px',left:'0px'}}>
+        <GeminiBox/>
+      </div>
+      </div>
+
       <div style={{ height: '25px' }}></div>
       <div style={{textAlign:'center',justifyContent:'center'}}>
       <button type="button" class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 shadow-lg shadow-red-500/50 dark:shadow-lg dark:shadow-red-800/80 font-medium rounded-lg text-sm px-5 py-3.5 text-center me-2 mb-2" onClick={menu_button}>Menu</button>
@@ -81,7 +97,10 @@ navigate('/menu')
       <ScrollPics />
       <div style={{ height: '25px' }}></div>
     </div>
-  );
+    {/* <div style={{ position: 'sticky', top: '100px' }}>
+        <TodaysSpecial />
+      </div> */}
+    </>);
 };
 
 export default Newhomepage;
